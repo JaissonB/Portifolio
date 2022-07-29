@@ -1,0 +1,13 @@
+$color-1: #0a0c0d;
+$color-2: #213635;
+$color-3: #1c5052;
+$color-4: #348e91;
+$color-5: #f2f2f2;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $color-5;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
