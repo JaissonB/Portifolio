@@ -25,10 +25,18 @@ header .header .profile {
   align-items: center;
   flex-direction: row;
 }
+header .header .profile-box-img {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #213635;
+}
 header .header .profile-img {
   width: 90px;
-  border-radius: 50%;
-  margin: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header .profile-infos {
   text-align: center;
@@ -59,4 +67,113 @@ main {
   margin-top: 150px;
   background-color: #1c5052;
   height: calc(100vh - 150px);
+}
+
+.initial-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+}
+.initial-page .box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.initial-page .box::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: #1c5052;
+  border-radius: 50%;
+  z-index: 1;
+}
+.initial-page .box::before {
+  content: "";
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+}
+.initial-page .box:hover::before {
+  inset: -20px 0px;
+}
+.initial-page .box:hover .content img {
+  opacity: 0;
+}
+.initial-page .box .content {
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #0a0c0d;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.initial-page .box .content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+.initial-page .box .content h2 {
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.initial-page .box .content h2 span {
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.initial-page .box .content a {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #f2f2f2;
+  color: #0a0c0d;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.initial-page .box .content a:hover {
+  letter-spacing: 0.2em;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
