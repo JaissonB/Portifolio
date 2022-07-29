@@ -1,0 +1,66 @@
+@import '../Theme.scss';
+
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: $color-3;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+    padding: 0 20px;
+    box-shadow: 0 0 1em $color-1;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      &-img {
+        width: 90px;
+        border-radius: 50%;
+        margin: 15px;
+      }
+
+      &-infos {
+        text-align: center;
+      }
+    }
+
+    .navegation {
+      display: flex;
+
+      &-itens {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          list-style: none;
+          padding: 10px;
+          cursor: pointer;
+
+          a {
+            font-size: 20px;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+            
+            a {
+              color: $color-4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 150px;
+  background-color: $color-3;
+  height: calc(100vh - 150px);
+}

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #1c5052;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  padding: 0 20px;
+  box-shadow: 0 0 1em #0a0c0d;
+}
+header .header .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+header .header .profile-img {
+  width: 90px;
+  border-radius: 50%;
+  margin: 15px;
+}
+header .header .profile-infos {
+  text-align: center;
+}
+header .header .navegation {
+  display: flex;
+}
+header .header .navegation-itens {
+  display: flex;
+  flex-direction: row;
+}
+header .header .navegation-itens li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+header .header .navegation-itens li a {
+  font-size: 20px;
+}
+header .header .navegation-itens li:hover {
+  transform: scale(1.1);
+}
+header .header .navegation-itens li:hover a {
+  color: #348e91;
+}
+
+main {
+  margin-top: 150px;
+  background-color: #1c5052;
+  height: calc(100vh - 150px);
+}/*# sourceMappingURL=style.css.map */
