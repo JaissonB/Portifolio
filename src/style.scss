@@ -246,12 +246,21 @@ main {
 
         &-stay {
           max-height: 75px;
-          opacity: 1;
+          opacity: 1;//for now
         }
 
         &-run {
           max-height: 80px;
           opacity: 0;
+        }
+
+        &-jump {
+          max-height: 85px;
+          opacity: 0;
+        }
+
+        &-jump.anime-jump {
+          animation: animeJumpMario 2s linear;
         }
       }
     }
@@ -274,11 +283,22 @@ main {
           align-items: center;
           text-align: justify;
           flex-direction: column;
-          line-height: 30px;
+          line-height: 28px;
         }
 
         h2 {
           margin: 10px;
+        }
+
+        p a, p strong {
+          cursor: pointer;
+          color: $color-1;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        & a:hover {
+          color: $color-2;
         }
 
         p + p {
@@ -309,5 +329,17 @@ main {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes animeJumpMario {
+  0% {
+    bottom: -30px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -30px;
   }
 }

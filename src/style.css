@@ -236,6 +236,14 @@ main {
   max-height: 80px;
   opacity: 0;
 }
+.initial-page .about-nav__run-jump {
+  max-height: 85px;
+  opacity: 0;
+}
+.initial-page .about-nav__run-jump.anime-jump {
+  -webkit-animation: animeJumpMario 2s linear;
+          animation: animeJumpMario 2s linear;
+}
 .initial-page .about-me {
   width: 100%;
   height: 384px;
@@ -254,10 +262,19 @@ main {
   align-items: center;
   text-align: justify;
   flex-direction: column;
-  line-height: 30px;
+  line-height: 28px;
 }
 .initial-page .about-me__scroll h2 {
   margin: 10px;
+}
+.initial-page .about-me__scroll p a, .initial-page .about-me__scroll p strong {
+  cursor: pointer;
+  color: #0a0c0d;
+  font-weight: bold;
+  text-decoration: none;
+}
+.initial-page .about-me__scroll a:hover {
+  color: #213635;
 }
 .initial-page .about-me__scroll p + p {
   text-indent: 1.5em;
@@ -289,5 +306,27 @@ main {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animeJumpMario {
+  0% {
+    bottom: -30px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -30px;
+  }
+}
+@keyframes animeJumpMario {
+  0% {
+    bottom: -30px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -30px;
   }
 }/*# sourceMappingURL=style.css.map */
