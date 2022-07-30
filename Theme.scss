@@ -10,4 +10,9 @@ $color-5: #f2f2f2;
     color: $color-5;
     box-sizing: border-box;
     font-family: 'Space Mono', monospace;
+    list-style: none;
+
+    &::selection {
+        background-color: $color-4;
+    }
 }

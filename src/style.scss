@@ -46,9 +46,10 @@ header {
         flex-direction: row;
 
         li {
-          list-style: none;
-          padding: 10px;
+          padding: 10px 15px;
           cursor: pointer;
+          border-radius: 15px;
+          transition: background-color .5s;
 
           a {
             font-size: 20px;
@@ -56,6 +57,7 @@ header {
 
           &:hover {
             transform: scale(1.1);
+            background-color: $color-2;
 
             a {
               color: $color-4;
@@ -69,11 +71,12 @@ header {
 
 main {
   margin-top: 150px;
-  background-color: $color-3;
+  background: linear-gradient(180deg, $color-3, $color-2);
   height: calc(100vh - 150px);
 }
 
 .initial-page {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -86,6 +89,7 @@ main {
     background: rgba(0,0,0,0.5);
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 10px 10px 30px $color-1;
 
     &::after {
       content: '';
@@ -167,6 +171,132 @@ main {
 
         &:hover {
           letter-spacing: 0.2em;
+        }
+      }
+    }
+  }
+
+  .about {
+    width: 50%;
+    min-height: 450px;
+    height: 100%;
+    border: 5px solid $color-1;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px $color-1;
+    background-color: $color-3;
+
+    &:hover {
+      transform: scale(1.01);
+
+      .about-nav__run-stay {
+        opacity: 0;
+      }
+
+      .about-nav__run-run {
+        opacity: 1;
+      }
+    }
+    
+    &-nav {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 2px solid $color-2;
+      
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          padding: 5px 15px;
+          cursor: pointer;
+          border-radius: 15px;
+          transition: background-color .5s;
+
+          a {
+            font-size: 20px;
+          }
+
+          .link-active {
+            color: $color-4;
+          }
+          
+          &:hover {
+            transform: scale(1.1);
+            background-color: $color-2;
+
+            a {
+              color: $color-4;
+            }
+          }
+        }
+      }
+
+      &__run {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+        width: 80px;
+
+        img {
+          bottom: -30px;
+          position: absolute;
+        }
+
+        &-stay {
+          max-height: 75px;
+          opacity: 1;
+        }
+
+        &-run {
+          max-height: 80px;
+          opacity: 0;
+        }
+      }
+    }
+
+    &-me {
+      width: 100%;
+      height: 384px;
+      padding: 12px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      &__scroll {
+        display: flex;
+        height: 360px;
+        padding: 12px;
+        overflow: auto;
+
+        &>div {
+          display: flex;
+          align-items: center;
+          text-align: justify;
+          flex-direction: column;
+          line-height: 30px;
+        }
+
+        h2 {
+          margin: 10px;
+        }
+
+        p + p {
+          text-indent: 1.5em;
+        }
+
+        &::-webkit-scrollbar {
+          width: 7px;
+        }
+  
+        &::-webkit-scrollbar-track {
+          background: $color-2;
+        }
+  
+        &::-webkit-scrollbar-thumb {
+          background-color: $color-4;
+          border-radius: 20px;
+          border: 3px solid $color-4;
         }
       }
     }

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./src/style.css" />
     <link rel="stylesheet" type="text/css" href="Theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,8 +20,8 @@
                     <img class="profile-img" src="http://github.com/JaissonB.png" alt="Perfil Jaisson Bassanesi">
                 </div>
                 <div class="profile-infos">
-                    <h1>Jaisson Bassanesi</h1>
-                    <p>Desenvolvedor Front-End</p>
+                    <h1>My Mind on Net</h1>
+                    <p>Descarrego aqui minhas ideias</p>
                 </div>
             </div>
             <div class="navegation">
@@ -44,11 +45,38 @@
                     <a href="#">Contato</a>
                 </div>
             </div>
-            <div></div>
+            <div class="about">
+                <div class="about-nav">
+                    <nav>
+                        <ul>
+                            <li id="about-nav-link-1" onclick="fControlAboutNav(this.id)"><a class="link-active">Me</a></li>
+                            <li id="about-nav-link-3" onclick="fControlAboutNav(this.id)" ><a>My job</a></li>
+                            <li id="about-nav-link-2" onclick="fControlAboutNav(this.id)" ><a>This Page</a></li>
+                        </ul>
+                    </nav>
+                    <div class="about-nav__run">
+                        <img class="about-nav__run-stay"  src="./assets/StayMario.png" alt="Mario parado">
+                        <img class="about-nav__run-run" src="./assets/RunMario.gif" alt="Mario correndo">
+                    </div>
+                </div>
+                <div class="about-me">
+                    <div class="about-me__scroll">
+                        <div>
+                            <h2>Olá!</h2>
+                            <p>Meu nome é Jaisson Bassanesi, sou desenvolvedor front-end.</p>
+                            <p>Moro em Getúlio Vargas, Rio Grande do Sul.</p>
+                            <p>Curso Ciência da Computação na Universidade Regional Integrada do Alto Uruguai e das Missões, Campus de Erechim.</p>
+                            <p>Resolvi criar esse "Portifólio" apenas para guardar coisas que gosto em um lugar que eu possa acessar de qualquer outro lugar e principalmente para praticar meus conhecimentos. Além de ser mais um motivo para continuar criando novos projetos para colocar aqui.</p>
+                            <p>Até por que no momento não busco alocação no mercado de trabalho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script type="text/javascript" src="./src/scripts/script.js"></script>
 </body>
 </html>
