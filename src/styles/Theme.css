@@ -4,6 +4,20 @@
   color: #f2f2f2;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
+  list-style: none;
+}
+*::-moz-selection {
+  background-color: #348e91;
+}
+*::selection {
+  background-color: #348e91;
+}
+
+button, li, a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header {
@@ -25,10 +39,18 @@ header .header .profile {
   align-items: center;
   flex-direction: row;
 }
+header .header .profile-box-img {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #213635;
+}
 header .header .profile-img {
   width: 90px;
-  border-radius: 50%;
-  margin: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header .profile-infos {
   text-align: center;
@@ -41,15 +63,17 @@ header .header .navegation-itens {
   flex-direction: row;
 }
 header .header .navegation-itens li {
-  list-style: none;
-  padding: 10px;
+  padding: 10px 15px;
   cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.5s;
 }
 header .header .navegation-itens li a {
   font-size: 20px;
 }
 header .header .navegation-itens li:hover {
   transform: scale(1.1);
+  background-color: #213635;
 }
 header .header .navegation-itens li:hover a {
   color: #348e91;
@@ -57,6 +81,6 @@ header .header .navegation-itens li:hover a {
 
 main {
   margin-top: 150px;
-  background-color: #1c5052;
+  background: linear-gradient(180deg, #1c5052, #213635);
   height: calc(100vh - 150px);
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=Theme.css.map */

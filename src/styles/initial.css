@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  list-style: none;
+}
+*::-moz-selection {
+  background-color: #348e91;
+}
+*::selection {
+  background-color: #348e91;
+}
+
+button, li, a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #1c5052;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  padding: 0 20px;
+  box-shadow: 0 0 1em #0a0c0d;
+}
+header .header .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+header .header .profile-box-img {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #213635;
+}
+header .header .profile-img {
+  width: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header .profile-infos {
+  text-align: center;
+}
+header .header .navegation {
+  display: flex;
+}
+header .header .navegation-itens {
+  display: flex;
+  flex-direction: row;
+}
+header .header .navegation-itens li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.5s;
+}
+header .header .navegation-itens li a {
+  font-size: 20px;
+}
+header .header .navegation-itens li:hover {
+  transform: scale(1.1);
+  background-color: #213635;
+}
+header .header .navegation-itens li:hover a {
+  color: #348e91;
+}
+
+main {
+  margin-top: 150px;
+  background: linear-gradient(180deg, #1c5052, #213635);
+  height: calc(100vh - 150px);
+}
+
+.initial-page {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: calc(100vh - 150px);
+}
+.initial-page .box {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 30px #0a0c0d;
+}
+.initial-page .box::after {
+  inset: 6px;
+  z-index: 1;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #1c5052;
+}
+.initial-page .box::before {
+  content: "";
+  transition: 0.5s;
+  inset: -10px 140px;
+  position: absolute;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+}
+.initial-page .box:hover::before {
+  inset: -20px 0px;
+}
+.initial-page .box:hover .content img {
+  opacity: 0;
+}
+.initial-page .box .content {
+  z-index: 3;
+  inset: 30px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 6px solid #0a0c0d;
+}
+.initial-page .box .content img {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  pointer-events: none;
+}
+.initial-page .box .content h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.initial-page .box .content h2 span {
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.initial-page .box .content a {
+  color: #0a0c0d;
+  margin-top: 10px;
+  transition: 0.5s;
+  font-weight: 500;
+  font-size: 1.25em;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 25px;
+  background: #f2f2f2;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.initial-page .box .content a:hover {
+  letter-spacing: 0.2em;
+}
+.initial-page .about {
+  width: 50%;
+  height: 100%;
+  min-height: 450px;
+  border-radius: 25px;
+  border: 5px solid #0a0c0d;
+  background-color: #1c5052;
+  box-shadow: 10px 10px 30px #0a0c0d;
+}
+.initial-page .about:hover {
+  transform: scale(1.01);
+}
+.initial-page .about:hover .about-nav__run-stay {
+  display: none;
+}
+.initial-page .about:hover .about-nav__run-run {
+  display: block;
+}
+.initial-page .about-nav {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 2px solid #213635;
+}
+.initial-page .about-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.initial-page .about-nav ul li {
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: background-color 0.5s;
+}
+.initial-page .about-nav ul li a {
+  font-size: 20px;
+}
+.initial-page .about-nav ul li .link-active {
+  color: #348e91;
+}
+.initial-page .about-nav ul li:hover {
+  transform: scale(1.1);
+  background-color: #213635;
+}
+.initial-page .about-nav ul li:hover a {
+  color: #348e91;
+}
+.initial-page .about-nav__run {
+  width: 80px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.initial-page .about-nav__run img {
+  bottom: -30px;
+  position: absolute;
+}
+.initial-page .about-nav__run-stay {
+  display: block;
+  max-height: 75px;
+}
+.initial-page .about-nav__run-run {
+  display: none;
+  max-height: 80px;
+}
+.initial-page .about-nav__run-jump {
+  display: none;
+  max-height: 85px;
+}
+.initial-page .about-nav__run-jump.anime-jump {
+  -webkit-animation: animeJumpMario 1.3s linear;
+          animation: animeJumpMario 1.3s linear;
+}
+.initial-page .about-me {
+  width: 100%;
+  height: 384px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.initial-page .about-me__scroll {
+  height: 360px;
+  display: flex;
+  padding: 12px;
+  overflow: auto;
+}
+.initial-page .about-me__scroll > div {
+  display: flex;
+  line-height: 28px;
+  text-align: justify;
+  align-items: center;
+  flex-direction: column;
+}
+.initial-page .about-me__scroll h2 {
+  margin: 10px;
+}
+.initial-page .about-me__scroll p a, .initial-page .about-me__scroll p strong {
+  cursor: pointer;
+  color: #0a0c0d;
+  font-weight: bold;
+  text-decoration: none;
+}
+.initial-page .about-me__scroll a:hover {
+  color: #213635;
+}
+.initial-page .about-me__scroll p + p {
+  text-indent: 1.5em;
+}
+.initial-page .about-me__scroll::-webkit-scrollbar {
+  width: 7px;
+}
+.initial-page .about-me__scroll::-webkit-scrollbar-track {
+  background: #213635;
+}
+.initial-page .about-me__scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid #348e91;
+  background-color: #348e91;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animeJumpMario {
+  0% {
+    bottom: -30px;
+  }
+  60% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -30px;
+  }
+}
+@keyframes animeJumpMario {
+  0% {
+    bottom: -30px;
+  }
+  60% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -30px;
+  }
+}/*# sourceMappingURL=initial.css.map */

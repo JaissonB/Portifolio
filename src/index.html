@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Jaisson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/initial.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/Theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="profile">
+                <div class="profile-box-img">
+                    <img class="profile-img" src="http://github.com/JaissonB.png" alt="Perfil Jaisson Bassanesi">
+                </div>
+                <div class="profile-infos">
+                    <h1>My Mind on Net</h1>
+                    <p>Descarrego aqui minhas ideias</p>
+                </div>
+            </div>
+            <div class="navegation">
+                <nav>
+                    <ul class="navegation-itens">
+                        <li><a>Início</a></li>
+                        <li><a>Projetos</a></li>
+                        <li><a>Contato</a></li>
+                        <li><a>Descontração</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="initial-page">
+            <div class="box">
+                <div class="content">
+                    <img src="http://github.com/JaissonB.png" alt="">
+                    <h2>Jaisson Bassanesi<br><span>Desenvolvedor Front-end</span></h2>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about-nav">
+                    <nav>
+                        <ul>
+                            <li id="about-nav-link-0" onclick="fControlAboutNav(this.id)"><a class="link-active">Me</a></li>
+                            <li id="about-nav-link-1" onclick="fControlAboutNav(this.id)"><a>My job</a></li>
+                            <li id="about-nav-link-2" onclick="fControlAboutNav(this.id)"><a>This Page</a></li>
+                        </ul>
+                    </nav>
+                    <div class="about-nav__run">
+                        <img class="about-nav__run-stay"  src="../assets/images/StayMario.png" alt="Mario parado">
+                        <img class="about-nav__run-jump" src="../assets/images/JumpMario.png" alt="Mario pulando">
+                        <img id="about-nav-link-3" class="about-nav__run-run" src="../assets/images/RunMario.gif"  onclick="fControlAboutNav(this.id)" alt="Mario correndo">
+                    </div>
+                </div>
+                <div class="about-me">
+                    <div class="about-me__scroll">
+                        <div>
+                            <h2>Olá!</h2>
+                            <p>Meu nome é Jaisson Bassanesi, sou desenvolvedor front-end.</p>
+                            <p>Moro em Getúlio Vargas, Rio Grande do Sul.</p>
+                            <p>Curso Ciência da Computação na Universidade Regional Integrada do Alto Uruguai e das Missões, Campus de Erechim.</p>
+                            <p>Resolvi criar esse "Portifólio" apenas para guardar coisas que gosto em um lugar que eu possa acessar de qualquer outro lugar e principalmente para praticar meus conhecimentos. Além de ser mais um motivo para continuar criando novos projetos para colocar aqui.</p>
+                            <p>Até por que no momento não busco alocação no mercado de trabalho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+</body>
+</html>
