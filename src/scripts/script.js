@@ -1,10 +1,12 @@
 const initId = 'about-nav-link-';
 const areaSection = $('.about-me__scroll');
+const soundJumpMario = new Audio('../assets/sounds/soundJumpMario.mp3');
+soundJumpMario.volume = 0.2;
 
 const fControlAboutNav = id => {
     const linkActive = $(`#${id} a`);
     let divWillAdd = $('.about-me__scroll>div');
-
+    
     [0, 1, 2, 3].forEach(el => {
         $(`#${initId + el} a`).removeClass('link-active');
     });
@@ -17,17 +19,17 @@ const fControlAboutNav = id => {
 }
 
 const fAnimationMarioEasterEgg = () => {
-    $('.about-nav__run-run').css('opacity', 0);
-    $('.about-nav__run-stay').css('opacity', 0);
-    $('.about-nav__run-jump').css('opacity', 1);
+    soundJumpMario.play();
+    $('.about-nav__run-run').css('display', 'none');
+    $('.about-nav__run-stay').css('display', 'none');
+    $('.about-nav__run-jump').css('display', 'block');
     $('.about-nav__run-jump').addClass('anime-jump');
-    setInterval(function() {
-        $('.about-nav__run-run').css('opacity', 0);
-        $('.about-nav__run-stay').css('opacity', 1);
-        $('.about-nav__run-jump').css('opacity', 0);
+    setTimeout(function() {
+        $('.about-nav__run-run').css('display', 'none');
+        $('.about-nav__run-stay').css('display', 'block');
+        $('.about-nav__run-jump').css('display', 'none');
         $('.about-nav__run-jump').removeClass('anime-jump');
-    }, 2000)
-    console.log("MARIOOO!!")
+    }, 1300);
 }
 
 const returnSection = [
@@ -55,11 +57,12 @@ const returnSection = [
         <p>Aceito sugestões... ༼ つ ◕_◕ ༽つ <a href="#contato">Manda aqui!</a></p>
     </div>`,
     `<div>
-        <h2>Mário?</h2>
-        <p>Considero essa página, apenas como um lugar para guardar meus projetos e poder mostrar pra qualquer um e em qualquer lugar.</p>
-        <p>Estilizar como eu quiser, adicionar Easter eggs e literalmente me divertir enquanto pratico.</p>
-        <p>Criei uma aba de <a href="#projetos">projetos</a> para adicionar projetos que desenvolvi e/ou estou desenvolvendo, como projetos acadêmicos e pessoais, que ficam com código fonte no github.</p>
-        <p>Em outra aba, "<a href="#descontracao">descontração</a>" pretendo adicionar coisas divertidas para se fazer, talvez algum jogo, passa tempo, algo do tipo.</p>
-        <p>Aceito sugestões... ༼ つ ◕_◕ ༽つ <a href="#contato">Manda aqui!</a></p>
+        <h1 style="color:#FEDE00"><span style="color: #71BF45">M</span><span style="color: #00A1E5">a</span>r<span style="color: #ED145B">i</span><span style="color: #71BF45">o</span> ?</h1><br>
+        <p>--- Easter egg 1 encontrado! ---</p><br>
+        <p>"— Não sei bem como vim parar aqui...</p>
+        <p>...acho melhor eu fugir e me esconder até saber onde estou."</p><br>
+        <p>— Você me pegou! Não fui rápido o bastante dessa vez!</p>
+        <p>— Pelo menos não preciso mais correr, já estava me cansando.</p>
+        <p>— Você parece reparar em tudo, vou me esconder melhor da próxima vez!</p>
     </div>`,
 ]

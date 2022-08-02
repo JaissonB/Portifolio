@@ -1,112 +1,38 @@
-@import '../Theme.scss';
-
-header {
-  top: 0;
-  width: 100%;
-  position: fixed;
-  background-color: $color-3;
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 150px;
-    padding: 0 20px;
-    box-shadow: 0 0 1em $color-1;
-
-    .profile {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-
-      &-box-img {
-        width: 90px;
-        height: 90px;
-        margin: 15px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 2px solid $color-2;
-      }
-
-      &-img {
-        width: 90px;
-        object-fit: cover;
-      }
-
-      &-infos {
-        text-align: center;
-      }
-    }
-
-    .navegation {
-      display: flex;
-
-      &-itens {
-        display: flex;
-        flex-direction: row;
-
-        li {
-          padding: 10px 15px;
-          cursor: pointer;
-          border-radius: 15px;
-          transition: background-color .5s;
-
-          a {
-            font-size: 20px;
-          }
-
-          &:hover {
-            transform: scale(1.1);
-            background-color: $color-2;
-
-            a {
-              color: $color-4;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-main {
-  margin-top: 150px;
-  background: linear-gradient(180deg, $color-3, $color-2);
-  height: calc(100vh - 150px);
-}
+@import './Theme.scss';
 
 .initial-page {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  position: absolute;
   align-items: center;
+  justify-content: space-evenly;
   min-height: calc(100vh - 150px);
 
   .box {
-    position: relative;
     width: 400px;
     height: 400px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 50%;
     overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
     box-shadow: 10px 10px 30px $color-1;
 
     &::after {
+      inset: 6px;
+      z-index: 1;
       content: '';
       position: absolute;
-      inset: 6px;
-      background: $color-3;
       border-radius: 50%;
-      z-index: 1;
+      background: $color-3;
     }
 
     &::before {
       content: '';
-      position: absolute;
-      inset: -10px 140px;
-      background: linear-gradient(315deg, #00ccff, #d400d4);
       transition: 0.5s;
+      inset: -10px 140px;
+      position: absolute;
       animation: animate 4s linear infinite;
+      background: linear-gradient(315deg, #00ccff, #d400d4);
     }
     
     &:hover::before {
@@ -118,34 +44,34 @@ main {
     }
 
     .content {
-      position: absolute;
-      inset: 30px;
-      border: 6px solid $color-1;
       z-index: 3;
-      border-radius: 50%;
-      overflow: hidden;
+      inset: 30px;
       display: flex;
+      overflow: hidden;
+      position: absolute;
+      border-radius: 50%;
       align-items: center;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
+      border: 6px solid $color-1;
 
       img {
-        position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
         width: 100%;
         height: 100%;
-        object-fit: cover;
         transition: 0.5s;
+        object-fit: cover;
+        position: absolute;
         pointer-events: none;
-        z-index: 3;
       }
 
       h2 {
-        position: relative;
         font-size: 1.5em;
-        text-align: center;
         font-weight: 600;
+        position: relative;
+        text-align: center;
         letter-spacing: 0.05em;
         text-transform: uppercase;
 
@@ -156,18 +82,18 @@ main {
       }
 
       a {
-        position: relative;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background: $color-5;
         color: $color-1;
-        border-radius: 25px;
+        margin-top: 10px;
+        transition: 0.5s;
         font-weight: 500;
         font-size: 1.25em;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        padding: 10px 20px;
+        position: relative;
+        border-radius: 25px;
+        background: $color-5;
         text-decoration: none;
-        transition: 0.5s;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
 
         &:hover {
           letter-spacing: 0.2em;
@@ -178,29 +104,29 @@ main {
 
   .about {
     width: 50%;
-    min-height: 450px;
     height: 100%;
-    border: 5px solid $color-1;
+    min-height: 450px;
     border-radius: 25px;
-    box-shadow: 10px 10px 30px $color-1;
+    border: 5px solid $color-1;
     background-color: $color-3;
+    box-shadow: 10px 10px 30px $color-1;
 
     &:hover {
       transform: scale(1.01);
 
       .about-nav__run-stay {
-        opacity: 0;
+        display: none;
       }
 
       .about-nav__run-run {
-        opacity: 1;
+        display: block;
       }
     }
     
     &-nav {
       display: flex;
-      align-items: center;
       padding: 10px;
+      align-items: center;
       border-bottom: 2px solid $color-2;
       
       ul {
@@ -208,8 +134,8 @@ main {
         flex-direction: row;
 
         li {
-          padding: 5px 15px;
           cursor: pointer;
+          padding: 5px 15px;
           border-radius: 15px;
           transition: background-color .5s;
 
@@ -233,11 +159,11 @@ main {
       }
 
       &__run {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin: auto;
         width: 80px;
+        margin: auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
 
         img {
           bottom: -30px;
@@ -245,22 +171,22 @@ main {
         }
 
         &-stay {
+          display: block;
           max-height: 75px;
-          opacity: 1;//for now
         }
 
         &-run {
+          display: none;
           max-height: 80px;
-          opacity: 0;
         }
 
         &-jump {
+          display: none;
           max-height: 85px;
-          opacity: 0;
         }
 
         &-jump.anime-jump {
-          animation: animeJumpMario 2s linear;
+          animation: animeJumpMario 1.3s linear;
         }
       }
     }
@@ -269,21 +195,23 @@ main {
       width: 100%;
       height: 384px;
       padding: 12px;
+      display: flex;
+      justify-content: center;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
 
       &__scroll {
-        display: flex;
         height: 360px;
+        display: flex;
         padding: 12px;
         overflow: auto;
 
         &>div {
           display: flex;
-          align-items: center;
-          text-align: justify;
-          flex-direction: column;
           line-height: 28px;
+          text-align: justify;
+          align-items: center;
+          flex-direction: column;
         }
 
         h2 {
@@ -314,9 +242,9 @@ main {
         }
   
         &::-webkit-scrollbar-thumb {
-          background-color: $color-4;
           border-radius: 20px;
           border: 3px solid $color-4;
+          background-color: $color-4;
         }
       }
     }
@@ -336,7 +264,7 @@ main {
   0% {
     bottom: -30px;
   }
-  50% {
+  60% {
     bottom: 0px;
   }
   100% {

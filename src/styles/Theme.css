@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  list-style: none;
+}
+*::-moz-selection {
+  background-color: #348e91;
+}
+*::selection {
+  background-color: #348e91;
+}
+
+button, li, a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background-color: #1c5052;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  padding: 0 20px;
+  box-shadow: 0 0 1em #0a0c0d;
+}
+header .header .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+header .header .profile-box-img {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #213635;
+}
+header .header .profile-img {
+  width: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header .profile-infos {
+  text-align: center;
+}
+header .header .navegation {
+  display: flex;
+}
+header .header .navegation-itens {
+  display: flex;
+  flex-direction: row;
+}
+header .header .navegation-itens li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.5s;
+}
+header .header .navegation-itens li a {
+  font-size: 20px;
+}
+header .header .navegation-itens li:hover {
+  transform: scale(1.1);
+  background-color: #213635;
+}
+header .header .navegation-itens li:hover a {
+  color: #348e91;
+}
+
+main {
+  margin-top: 150px;
+  background: linear-gradient(180deg, #1c5052, #213635);
+  height: calc(100vh - 150px);
+}/*# sourceMappingURL=Theme.css.map */
