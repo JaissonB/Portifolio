@@ -1,6 +1,6 @@
 const initId = 'about-nav-link-';
 const areaSection = $('.about-me__scroll');
-const soundJumpMario = new Audio('../assets/sounds/soundJumpMario.mp3');
+const soundJumpMario = new Audio('./assets/sounds/soundJumpMario.mp3');
 soundJumpMario.volume = 0.2;
 
 const fControlAboutNav = id => {
