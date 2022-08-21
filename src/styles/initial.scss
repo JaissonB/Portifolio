@@ -219,7 +219,6 @@
         }
 
         p a, p strong {
-          cursor: pointer;
           color: $color-1;
           font-weight: bold;
           text-decoration: none;
@@ -227,6 +226,7 @@
 
         & a:hover {
           color: $color-2;
+          cursor: pointer;
         }
 
         p + p {

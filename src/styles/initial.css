@@ -278,13 +278,13 @@ main {
   margin: 10px;
 }
 .initial-page .about-me__scroll p a, .initial-page .about-me__scroll p strong {
-  cursor: pointer;
   color: #0a0c0d;
   font-weight: bold;
   text-decoration: none;
 }
 .initial-page .about-me__scroll a:hover {
   color: #213635;
+  cursor: pointer;
 }
 .initial-page .about-me__scroll p + p {
   text-indent: 1.5em;
